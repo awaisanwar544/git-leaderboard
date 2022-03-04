@@ -2,7 +2,7 @@ import './main.css';
 import { sourceRepoInfo } from './modules/sourceRepoInfo.js';
 import stargazers from './modules/stargazers.js';
 import users from './modules/users.js';
-import getCardForUser from './modules/followersUI.js'
+import getCardForUser from './modules/followersUI.js';
 
 async function main() {
   const sourceRepo = await sourceRepoInfo();
@@ -14,10 +14,9 @@ async function main() {
     return 0;
   });
   const container = document.getElementById('leaders-container');
-  usersList.forEach((user) => {
-    container.appendChild(getCardForUser(user));
+  usersList.forEach((user, index) => {
+    container.appendChild(getCardForUser(user, index));
   });
-  console.log(usersList);
 }
 
 main();

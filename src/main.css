@@ -1,3 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
-  background-color: rgb(199, 198, 198);
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  font-family: Roboto, sans-serif;
+  height: 100vh;
+}
+
+
+header {
+  color: #fff;
+  text-align: center;
+}
+
+.star-img {
+  width: 100px;
+}
+
+.hex {
+  display: block;
+  margin: 1em;
+  width: calc(7em * 0.866);
+  height: 7em;
+  position: relative;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -moz-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex-background {
+  position: absolute;
+  background-color: #fd615c; /*color of the main-background*/
+  top: 0.25em; /* equal to border thickness */
+  left: 0.25em; /* equal to border thickness */
+  width: 5.56em; /* container height - (border thickness * 2) */
+  height: 6.5em; /* container height - (border thickness * 2) */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -moz-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hex img {
+  position: absolute;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -moz-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#leaders-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #ffe53b7e;
+  position: relative;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  margin: 1em;
+}
+
+.user-name {
+  font-size: 1.5em;
+  color: #FF2525;
+}
+
+.followers {
+  font-size: 1em;
+  color: #fae2b6;
+}
+
+.profile-link {
+  margin-left: auto;
+}
+
+.profile-link > a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.profile-link > a:hover {
+  color: #FF2525;
+}
+
+.rank-container {
+  margin-left: 1em;
+  text-align: center;
+  z-index: 2;
+}
+
+.rank {
+  fill: #FF2525;
+  stroke-width:5.00886;
 }
